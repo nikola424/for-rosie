@@ -144,11 +144,9 @@
       titleEl.innerHTML = t + ' <a class="lightbox__open" href="' + embed +
         '" target="_blank" rel="noopener">Open full page ↗</a>';
       stage.innerHTML = '<iframe class="lightbox__frame" src="' + embed +
-        '" title="' + t + '" loading="eager"></iframe>' +
-        '<span class="lightbox__scrollhint" aria-hidden="true">Scroll down &darr;</span>';
+        '" title="' + t + '" loading="eager"></iframe>';
       stage.scrollTop = 0;
       var fr = stage.querySelector("iframe");
-      var hint = stage.querySelector(".lightbox__scrollhint");
       if (fr) fr.addEventListener("load", function () {
         try {
           fr.contentWindow.scrollTo(0, 0);
@@ -161,10 +159,6 @@
             "::-webkit-scrollbar-thumb:hover{background:#a8436a}";
           fr.contentDocument.head.appendChild(st);
           fr.contentWindow.focus();
-          // The hint disappears as soon as they start scrolling.
-          fr.contentWindow.addEventListener("scroll", function () {
-            if (fr.contentWindow.scrollY > 60 && hint) hint.classList.add("is-gone");
-          }, { passive: true });
         } catch (e) {}
       });
     } else if (full) {
