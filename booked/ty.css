@@ -1,0 +1,19 @@
+.ty-wait { max-width: 720px; margin: 0 auto 28px; padding: 14px 20px; border: 1px solid var(--accent); border-radius: 12px; background: rgba(214, 96, 142, 0.1); text-align: center; font-family: var(--sans); font-weight: 700; font-size: 1rem; letter-spacing: 0.01em; color: var(--accent-text); }
+.ty-sub { max-width: 620px; margin: 18px auto 0; text-align: center; color: var(--muted); font-size: 1.05rem; line-height: 1.5; }
+.ty-slot { max-width: 520px; margin: 28px auto 0; padding: 22px 24px; text-align: center; border: 1px solid var(--hair); border-radius: 14px; background: var(--surface); }
+.ty-slot b { display: block; font-family: var(--display); font-size: 1.5rem; font-weight: 500; color: var(--ink); }
+.ty-slot span { display: block; margin-top: 6px; color: var(--muted); font-size: 0.95rem; }
+.ty-cal { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.ty-cal a { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 14px 26px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-family: var(--sans); font-weight: 700; text-decoration: none; }
+.ty-note { text-align: center; color: var(--muted); font-size: 0.95rem; margin-top: 16px; }
+.ty-mail { max-width: 640px; margin: 26px auto 0; border-radius: 12px; overflow: hidden; background: #fff; color: #202124; box-shadow: 0 24px 60px -30px rgba(0,0,0,.8); text-align: left; font-family: Arial, "Helvetica Neue", sans-serif; }
+.ty-mail__bar { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: #f6f8fc; border-bottom: 1px solid #e0e0e0; font-size: 0.82rem; color: #5f6368; }
+.ty-mail__bar b { color: #d93025; font-size: 1.05rem; }
+.ty-mail__row { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: #f2f6fc; }
+.ty-mail__row img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: none; }
+.ty-mail__txt { min-width: 0; flex: 1; }
+.ty-mail__from { display: flex; justify-content: space-between; gap: 10px; font-weight: 700; font-size: 0.95rem; }
+.ty-mail__from span { font-weight: 700; font-size: 0.78rem; color: #1a73e8; flex: none; }
+.ty-mail__sub { font-weight: 700; font-size: 0.92rem; margin-top: 2px; }
+.ty-mail__pv { font-size: 0.86rem; color: #5f6368; margin-top: 2px; }
+.ty-mail__sub, .ty-mail__pv { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

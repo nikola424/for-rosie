@@ -1,0 +1,77 @@
+/* ONE page, VSL then application. Layout follows kb/landing-pages/08 Closing Cabal:
+   small eyebrow, big bold headline with coloured key words, "FREE TRAINING" tag, framed video,
+   "Ready to take the next step?", inline application card, short FAQ. */
+body::before { background: radial-gradient(70% 40% at 50% 0%, rgba(214, 96, 142, 0.22), transparent 70%), #fcf5f6; }
+.st6 { max-width: 980px; margin: 0 auto; padding: clamp(40px, 7vh, 72px) 20px clamp(48px, 7vh, 80px); text-align: center; }
+.st6__eyebrow { margin-bottom: 20px; }
+.st6__title { font-family: var(--sans); font-weight: 700; font-size: clamp(1.9rem, 4.4vw, 3rem); line-height: 1.1; letter-spacing: -0.025em; color: var(--ink); text-wrap: balance; max-width: 880px; margin: 0 auto; }
+.st6__title span { color: var(--accent-text); text-shadow: 0 0 40px rgba(240, 160, 192, 0.35); }
+.st6__tag { margin: 22px 0 18px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); }
+.st6__video .video__frame { border: 3px solid rgba(43, 29, 36, 0.85); border-radius: 12px; box-shadow: 0 30px 80px -30px rgba(214, 96, 142, 0.5); }
+.st6__h2 { margin: clamp(44px, 7vh, 72px) 0 12px; font-family: var(--sans); font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.2rem); letter-spacing: -0.02em; color: var(--ink); }
+.st6__lead { max-width: 560px; margin: 0 auto 28px; color: var(--muted); font-size: 1.05rem; }
+.st6__form { position: relative; max-width: 760px; margin: 0 auto; text-align: left; padding: clamp(24px, 4vw, 40px); border-radius: 14px; background: var(--surface); border: 1px solid var(--hair); min-height: 380px; display: flex; flex-direction: column; box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.9); }
+.st6__form .q__title { font-family: var(--sans); font-weight: 700; }
+.st6__form .apply__progress { margin-right: 0; }
+.book__slot { display: grid; place-items: center; text-decoration: none; }
+.st6__faq { max-width: 760px; margin: clamp(56px, 9vh, 96px) auto 0; text-align: left; }
+.st6__faq .eyebrow, .st6__faq .st6__h2 { text-align: center; }
+.st6__faq details { border-bottom: 1px solid var(--hair); padding: 20px 4px; }
+.st6__faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; align-items: center; min-height: 44px; font-size: 1.12rem; font-weight: 700; color: var(--ink); }
+.st6__faq summary::-webkit-details-marker { display: none; }
+.st6__faq summary::after { content: "+"; font-size: 1.5rem; color: var(--accent-text); transition: transform 0.3s var(--ease); }
+.st6__faq details[open] summary::after { transform: rotate(45deg); }
+.st6__faq details p { margin-top: 10px; color: var(--muted); }
+@media (max-width: 640px) { .st6__title { font-size: 1.85rem; } }
+
+.st6__even { max-width: 720px; margin: 18px auto 0; font-size: 1rem; line-height: 1.5; color: var(--muted); }
+
+
+/* long landing (Limitless Agency layout): sub, stats, numbered sections, moves */
+.lp__sub { max-width: 700px; margin: 18px auto 0; color: var(--muted); font-size: 1.1rem; line-height: 1.55; }
+.lp__here { margin: 22px 0 18px; font-weight: 700; letter-spacing: .04em; color: var(--ink); }
+.lp__cta { margin-top: 26px; }
+.lp__stats { margin: clamp(48px, 8vh, 80px) auto 0; max-width: 860px; }
+.lp__kicker { font-size: .8rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+.lp__statgrid { margin-top: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.lp__statgrid div { padding: 26px 22px; border-radius: 14px; background: var(--surface); border: 1px solid var(--hair); }
+.lp__statgrid b { display: block; font-family: var(--display); font-weight: 500; font-size: 2.8rem; line-height: 1.05; color: var(--accent-text); }
+.lp__statgrid span { display: block; margin-top: 10px; color: var(--muted); font-size: .98rem; }
+.lp__sec { max-width: 760px; margin: clamp(56px, 9vh, 96px) auto 0; text-align: left; }
+.lp__num { font-size: .8rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-text); }
+.lp__h2 { margin-top: 14px; font-family: var(--sans); font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.3rem); line-height: 1.15; letter-spacing: -.02em; color: var(--ink); text-wrap: balance; }
+.lp__h3 { margin-top: 28px; font-family: var(--sans); font-weight: 700; font-size: 1.3rem; color: var(--ink); }
+.lp__p { margin-top: 16px; color: var(--muted); font-size: 1.08rem; line-height: 1.65; }
+.lp__list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 12px; }
+.lp__list li { padding: 18px 22px; border-radius: 14px; background: var(--surface); border: 1px solid var(--hair); color: var(--ink); font-size: 1.05rem; line-height: 1.45; }
+.lp__moves { margin-top: 26px; display: grid; gap: 14px; }
+.lp__moves article { padding: 24px 24px; border-radius: 16px; background: var(--surface); border: 1px solid var(--hair); }
+.lp__moves span { font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-text); }
+.lp__moves h3 { margin-top: 8px; font-family: var(--display); font-weight: 500; font-size: 1.5rem; color: var(--ink); }
+.lp__moves p { margin-top: 8px; color: var(--muted); line-height: 1.6; }
+@media (max-width: 640px) { .lp__statgrid { grid-template-columns: 1fr; } }
+
+/* ---- Emmaline look: black, gold, bold caps (matches her own Mastermind page) ---- */
+.st6__eyebrow { font-size: .74rem; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; }
+.st6__title { font-family: var(--impact); font-weight: 400; text-transform: uppercase; font-size: clamp(2.3rem, 5.6vw, 4.1rem); line-height: 1.04; letter-spacing: .01em; max-width: 960px; text-shadow: none; }
+.st6__title span { color: var(--accent-text); text-shadow: none; }
+.lp__serif { margin-top: 22px; font-family: var(--display); font-style: italic; font-size: clamp(1.25rem, 2.4vw, 1.7rem); color: var(--accent-text); }
+.lp__h2 { font-family: var(--impact); font-weight: 400; text-transform: uppercase; letter-spacing: .01em; font-size: clamp(1.9rem, 4.4vw, 3rem); line-height: 1.08; color: var(--ink); }
+.st6__h2 { font-family: var(--impact); font-weight: 400; text-transform: uppercase; letter-spacing: .01em; }
+.lp__moves h3, .lp__h3 { font-family: var(--impact); font-weight: 400; text-transform: uppercase; letter-spacing: .02em; }
+.lp__moves h3 { font-size: 2rem; }
+.lp__h3 { font-size: 1.6rem; line-height: 1.2; color: var(--ink); }
+.lp__results { margin-top: 22px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.lp__results div { padding: 24px 18px; border-radius: 4px; background: var(--surface); border: 1px solid var(--hair); border-top: 2px solid var(--accent); text-align: center; }
+.lp__results b { display: block; font-family: var(--impact); font-weight: 400; font-size: 2.2rem; line-height: 1.05; color: var(--accent-text); letter-spacing: .01em; }
+.lp__results span { display: block; margin-top: 6px; color: var(--ink); font-size: .95rem; }
+.lp__results small { display: block; margin-top: 10px; color: var(--muted); font-size: .8rem; line-height: 1.4; }
+.lp__creds { margin-top: 36px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: center; }
+.lp__creds b { display: block; font-family: var(--impact); font-weight: 400; font-size: 2.6rem; color: var(--ink); }
+.lp__creds span { display: block; color: var(--muted); font-size: .9rem; }
+.lp__moves { grid-template-columns: repeat(2, 1fr); }
+.lp__moves article { border-radius: 4px; border-top: 2px solid var(--accent); }
+.lp__list li { border-radius: 4px; border-left: 2px solid var(--accent); }
+.btn-apply, .q__ok { border-radius: 2px; letter-spacing: .12em; text-transform: uppercase; font-size: .86rem; }
+@media (max-width: 760px) { .lp__results { grid-template-columns: repeat(2, 1fr); } .lp__moves { grid-template-columns: 1fr; } .lp__creds { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .lp__results { grid-template-columns: 1fr; } }
