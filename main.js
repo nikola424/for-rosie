@@ -144,17 +144,27 @@
       titleEl.innerHTML = t + ' <a class="lightbox__open" href="' + embed +
         '" target="_blank" rel="noopener">Open full page ↗</a>';
       stage.innerHTML = '<iframe class="lightbox__frame" src="' + embed +
-        '" title="' + t + '" loading="eager"></iframe>';
+        '" title="' + t + '" loading="eager"></iframe>' +
+        '<span class="lightbox__scrollhint" aria-hidden="true">Scroll down &darr;</span>';
       stage.scrollTop = 0;
       var fr = stage.querySelector("iframe");
+      var hint = stage.querySelector(".lightbox__scrollhint");
       if (fr) fr.addEventListener("load", function () {
         try {
           fr.contentWindow.scrollTo(0, 0);
-          // Always-visible scrollbar inside the preview, and give it focus so scrolling works straight away.
+          // Big, always-visible scrollbar inside the preview, and give it focus so scrolling works straight away.
           var st = fr.contentDocument.createElement("style");
-          st.textContent = "html{overflow-y:scroll}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(150,130,110,.45);border-radius:8px;border:2px solid transparent;background-clip:padding-box}";
+          st.textContent = "html{overflow-y:scroll!important;scrollbar-width:auto;scrollbar-color:#c4577f #f3e6ea}" +
+            "::-webkit-scrollbar{width:18px!important;height:18px}" +
+            "::-webkit-scrollbar-track{background:#f3e6ea}" +
+            "::-webkit-scrollbar-thumb{background:#c4577f;min-height:80px;border-radius:10px;border:3px solid #f3e6ea}" +
+            "::-webkit-scrollbar-thumb:hover{background:#a8436a}";
           fr.contentDocument.head.appendChild(st);
           fr.contentWindow.focus();
+          // The hint disappears as soon as they start scrolling.
+          fr.contentWindow.addEventListener("scroll", function () {
+            if (fr.contentWindow.scrollY > 60 && hint) hint.classList.add("is-gone");
+          }, { passive: true });
         } catch (e) {}
       });
     } else if (full) {
